@@ -21,8 +21,9 @@ const userRoutes=require('./routes/userRoutes')
 db();
 app.use('/api/contact',contactRoutes);
 app.use('/api/users',userRoutes)
-
+app.get('/',(req,res)=>{
+    console.log("Server Connected")
+})
 
 app.listen(5000,()=>console.log("Server Connected"))
 
-//mongodb+srv://user1:user123@cluster0.comux0j.mongodb.net/?retryWrites=true&w=majority
